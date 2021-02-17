@@ -1,7 +1,6 @@
-<template lang="html">
-  <div class='wrapper'>
-    <button class='change__style' @click='changeStyle()'>Change Style</button>
-    <tabs :mode="mode">
+<template>
+  <div class="wrapper">
+    <tabs>
       <tab title="Tab 1">Hello From Tab 1</tab>
       <tab title="Tab 2">Hello From Tab 2</tab>
     </tabs>
@@ -16,20 +15,6 @@ export default {
   components: {
     Tab,
     Tabs,
-  },
-  data() {
-    return {
-      mode: "dark",
-    };
-  },
-  methods: {
-    changeStyle() {
-      if (this.mode === "dark") {
-        this.mode = "light";
-      } else {
-        this.mode = "dark";
-      }
-    },
   },
 };
 </script>
